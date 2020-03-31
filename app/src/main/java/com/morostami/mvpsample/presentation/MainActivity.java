@@ -1,8 +1,10 @@
-package com.morostami.myrxsample;
+package com.morostami.mvpsample.presentation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.morostami.mvpsample.R;
 
 public class MainActivity extends AppCompatActivity {
 

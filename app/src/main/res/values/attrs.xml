@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- *** archsample theme custom attribute *** -->
+    <attr name="rxs_dividerColor" format="reference"/>
+    <attr name="rxs_elementBackgroundColor" format="reference"/>
+    <attr name="rxs_txtColorPrimary" format="reference"/>
+    <attr name="rxs_txtColorSecondary" format="reference"/>
+</resources>

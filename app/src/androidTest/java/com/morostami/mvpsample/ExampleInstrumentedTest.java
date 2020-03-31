@@ -1,4 +1,4 @@
-package com.morostami.myrxsample;
+package com.morostami.mvpsample;
 
 import android.content.Context;
 
