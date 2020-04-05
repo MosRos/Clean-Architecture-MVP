@@ -2,6 +2,7 @@ package com.morostami.mvpsample.data.prefs;
 
 import android.content.SharedPreferences;
 
+import androidx.annotation.NonNull;
 import androidx.core.util.Pair;
 
 import javax.inject.Inject;
@@ -25,9 +26,10 @@ public class PreferencesHelper {
     }
 
     /* Key and default value */
-    private final Pair<String, Integer> SELECTED_THEME_MODE = new Pair("theme_mode", 0);
+    @NonNull
+    private final Pair<String, Integer> SELECTED_THEME_MODE = new Pair<String, Integer>("theme_mode", 0);
     public Integer getThemeMode() {
-        return preferences.getInt(SELECTED_THEME_MODE.first, SELECTED_THEME_MODE.second);
+        return preferences.getInt(SELECTED_THEME_MODE.first, 0);
     }
     public void setThemeMode(Integer themeMode) {
         putInteger(SELECTED_THEME_MODE.first, themeMode);
