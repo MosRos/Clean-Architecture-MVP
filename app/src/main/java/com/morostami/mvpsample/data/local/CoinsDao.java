@@ -12,6 +12,7 @@ import java.util.List;
 
 import io.reactivex.Completable;
 import io.reactivex.Observable;
+import io.reactivex.Single;
 
 @Dao
 public interface CoinsDao {
@@ -23,7 +24,7 @@ public interface CoinsDao {
     Completable insertCoins(List<Coin> coins);
 
     @Query("SELECT * FROM Coin")
-    Observable<List<Coin>> getAllCoins();
+    Single<List<Coin>> getAllCoins();
 
     @Delete
     void deleteCoin(Coin coin);

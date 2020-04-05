@@ -2,22 +2,32 @@ package com.morostami.mvpsample;
 
 import android.app.Application;
 
+import com.morostami.mvpsample.di.AppComponent;
+import com.morostami.mvpsample.di.DaggerAppComponent;
+
 import timber.log.Timber;
 
 public class MvpApp extends Application {
 
     private MvpApp _mvpApp;
+    private AppComponent _appComponent;
 
     @Override
     public void onCreate() {
         super.onCreate();
         _mvpApp = this;
-
+        _appComponent = DaggerAppComponent.builder()
+                .application(_mvpApp)
+                .build();
         initTimber();
     }
 
     public MvpApp getMvpApplication() {
         return _mvpApp;
+    }
+
+    public AppComponent getAppComponent() {
+        return _appComponent;
     }
 
     private void initTimber() {

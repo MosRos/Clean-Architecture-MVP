@@ -4,6 +4,7 @@ import java.util.List;
 import javax.inject.Inject;
 import io.reactivex.Completable;
 import io.reactivex.Observable;
+import io.reactivex.Single;
 
 public class CryptoLocalDataSource implements CoinsDao {
     private CoinsDao coinsDao;
@@ -24,7 +25,7 @@ public class CryptoLocalDataSource implements CoinsDao {
     }
 
     @Override
-    public Observable<List<Coin>> getAllCoins() {
+    public Single<List<Coin>> getAllCoins() {
         return coinsDao.getAllCoins();
     }
 

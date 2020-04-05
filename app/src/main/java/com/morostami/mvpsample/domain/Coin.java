@@ -1,5 +1,6 @@
 package com.morostami.mvpsample.domain;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -10,17 +11,30 @@ import com.google.gson.annotations.SerializedName;
 public class Coin {
     @SerializedName("id")
     @PrimaryKey
-    private final String id;
+    @NonNull
+    private String id;
 
     @SerializedName("symbol")
-    private final String symbol;
+    private String symbol;
 
     @SerializedName("name")
-    private final String name;
+    private String name;
 
     public Coin(String id, String symbol, String name) {
         this.id = id;
         this.symbol = symbol;
+        this.name = name;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
+    }
+
+    public void setName(String name) {
         this.name = name;
     }
 

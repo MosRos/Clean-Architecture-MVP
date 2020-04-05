@@ -7,13 +7,17 @@ import com.morostami.mvpsample.domain.Coin;
 
 import java.util.List;
 
+import io.reactivex.Observable;
 import io.reactivex.Single;
 import retrofit2.http.GET;
 
 public interface CoinGeckoService {
     @GET("ping")
-    Single<NetworkResponse<CoinGeckoPingResponse, CoinGeckoErrorResponse>> pingTest();
+    Single<CoinGeckoPingResponse> pingTest();
 
     @GET("coins/list")
-    Single<NetworkResponse<List<Coin>, CoinGeckoErrorResponse>> getCoinsList();
+    Single<List<Coin>> getCoinsList();
+
+    @GET("coins/list")
+    Observable<List<Coin>> getCoinsListObservable();
 }

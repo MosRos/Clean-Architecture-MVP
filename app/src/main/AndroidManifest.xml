@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.morostami.mvpsample">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-sdk tools:overrideLibrary="androidx.security"/>
     <application
         android:allowBackup="true"

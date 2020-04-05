@@ -4,9 +4,13 @@ import android.app.Application;
 
 import androidx.room.Room;
 
+import com.morostami.mvpsample.data.CoinsListRepositoryImpl;
+import com.morostami.mvpsample.data.api.CoinGeckoService;
 import com.morostami.mvpsample.data.local.CoinsDao;
 import com.morostami.mvpsample.data.local.CryptoDatabase;
 import com.morostami.mvpsample.data.local.CryptoLocalDataSource;
+import com.morostami.mvpsample.domain.CoinsListRepository;
+import com.morostami.mvpsample.domain.CoinsUseCase;
 
 import javax.inject.Singleton;
 
@@ -28,9 +32,15 @@ public class DataModule {
         return database.coinsDao();
     }
 
+//    @Provides
+//    CryptoLocalDataSource provideCryptoLocalDataSource(CoinsDao coinsDao) {
+//        return new CryptoLocalDataSource(coinsDao);
+//    }
+
     @Singleton
     @Provides
-    CryptoLocalDataSource provideCryptoLocalDataSource(CoinsDao coinsDao) {
-        return new CryptoLocalDataSource(coinsDao);
+    CoinsListRepository provideCoinsListRepository(CoinGeckoService coinGeckoService, CryptoLocalDataSource cryptoLocalDataSource) {
+        return new CoinsListRepositoryImpl(coinGeckoService, cryptoLocalDataSource);
     }
 }
+

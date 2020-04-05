@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RxSample-MVP</string>
+    <string name="coins_list">Coins List</string>
 </resources>

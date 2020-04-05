@@ -9,7 +9,7 @@ import dagger.BindsInstance;
 import dagger.Component;
 
 @Singleton
-@Component(modules = {AppModule.class, DataModule.class, NetworkModule.class})
+@Component(modules = {AppModule.class, DataModule.class, NetworkModule.class, AppSubComponents.class})
 public interface AppComponent {
     @Component.Builder
     interface Builder {
@@ -18,4 +18,5 @@ public interface AppComponent {
         AppComponent build();
     }
 
+    CoinsComponent.Factory coinsComponent();
 }
