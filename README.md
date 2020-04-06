@@ -5,7 +5,7 @@ It is a simple app, gets list of cryptocurrency coins from coingecko api, save t
 
 ### Features
 * Java
-* Clean Architecture: I have seen some people using a centralized data manager for data and model layer. 
+* Clean Architecture: I have seen some people using a centralized data manager for data and model layer but I am not intrested in that approach because I think centralized approach is not modular freindly. 
 * Repository Pattern with RxJava. 
 * MVP Design Pattern: this design act on presentation layer.
 * Android ViewBinding(different from databinding): instead of ButterKnife in classic MVPs, I used new android ViewBinding.
