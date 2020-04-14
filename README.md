@@ -1,6 +1,6 @@
 <p float="left">
 <img src="screenshots/coins_list_light.jpg" width="45%"/>
-<img src="screenshots/coins_list_light.jpg" width="45%"/>
+<img src="screenshots/coins_list_dark.jpg" width="45%"/>
 </p>
 
 #### Android Clean Architecture Sample with MVP design pattern.
