@@ -1,3 +1,8 @@
+<p float="left">
+<img src="screenshots/coins_list_light.jpg" width="45%"/>
+<img src="screenshots/coins_list_light.jpg" width="45%"/>
+</p>
+
 #### Android Clean Architecture Sample with MVP design pattern.
 A Sample app for implementing Clean Architecture with MVP and Repository pattern using RxJava.
 I Also developed an mvvm sample with kotlin and power of coroutines. In this mvp sample I used Java and RxJava.
